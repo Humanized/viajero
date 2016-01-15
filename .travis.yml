@@ -35,12 +35,12 @@ install:
   - |
     ./init --env=Development
     sed -i s/root/travis/ common/config/main-local.php
-    sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" frontend/config/main.php
-    sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" backend/config/main.php
-    cd tests/codeception/backend && codecept build
+    sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" app/config/main.php
+    sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" api/config/main.php
+    cd tests/codeception/api && codecept build
     cd ../common && codecept build
     cd ../console && codecept build
-    cd ../frontend && codecept build
+    cd ../app && codecept build
     cd ../../../
 
 before_script:

@@ -1,11 +1,11 @@
 <?php
 
-namespace tests\codeception\frontend\unit\models;
+namespace tests\codeception\app\unit\models;
 
-use tests\codeception\frontend\unit\DbTestCase;
+use tests\codeception\app\unit\DbTestCase;
 use tests\codeception\common\fixtures\UserFixture;
 use Codeception\Specify;
-use frontend\models\SignupForm;
+use app\models\SignupForm;
 
 class SignupFormTest extends DbTestCase
 {
@@ -45,7 +45,7 @@ class SignupFormTest extends DbTestCase
         return [
             'user' => [
                 'class' => UserFixture::className(),
-                'dataFile' => '@tests/codeception/frontend/unit/fixtures/data/models/user.php',
+                'dataFile' => '@tests/codeception/app/unit/fixtures/data/models/user.php',
             ],
         ];
     }

@@ -1,10 +1,10 @@
 <?php
 
-namespace tests\codeception\frontend\models;
+namespace tests\codeception\app\models;
 
 use Yii;
-use tests\codeception\frontend\unit\DbTestCase;
-use frontend\models\PasswordResetRequestForm;
+use tests\codeception\app\unit\DbTestCase;
+use app\models\PasswordResetRequestForm;
 use tests\codeception\common\fixtures\UserFixture;
 use common\models\User;
 use Codeception\Specify;
@@ -75,7 +75,7 @@ class PasswordResetRequestFormTest extends DbTestCase
         return [
             'user' => [
                 'class' => UserFixture::className(),
-                'dataFile' => '@tests/codeception/frontend/unit/fixtures/data/models/user.php'
+                'dataFile' => '@tests/codeception/app/unit/fixtures/data/models/user.php'
             ],
         ];
     }

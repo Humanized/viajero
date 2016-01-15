@@ -1,6 +1,6 @@
 <?php
-use tests\codeception\frontend\FunctionalTester;
-use tests\codeception\frontend\_pages\AboutPage;
+use tests\codeception\app\FunctionalTester;
+use tests\codeception\app\_pages\AboutPage;
 
 /* @var $scenario Codeception\Scenario */
 

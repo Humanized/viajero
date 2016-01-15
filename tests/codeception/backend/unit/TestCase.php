@@ -1,8 +1,8 @@
 <?php
 
-namespace tests\codeception\backend\unit;
+namespace tests\codeception\api\unit;
 
 class TestCase extends \yii\codeception\TestCase
 {
-    public $appConfig = '@tests/codeception/config/backend/unit.php';
+    public $appConfig = '@tests/codeception/config/api/unit.php';
 }

@@ -1,9 +1,7 @@
 <?php
+
 $params = array_merge(
-    require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+        require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
 
 return [
@@ -12,6 +10,14 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'console\controllers',
     'components' => [
+        'urlManager' => [
+            'baseUrl' => 'localhost/dev/viajero',
+            'hostInfo' => 'localhost/dev/viajero',
+            'scriptUrl' => '',
+            'rules' => [
+                'online-betalen/<invoice_number>/<hash>' => 'invoice/online-payment',
+            ],
+        ],
         'log' => [
             'targets' => [
                 [

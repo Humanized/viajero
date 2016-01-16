@@ -31,6 +31,13 @@ use yii\helpers\Console;
 class AdminController extends \yii\console\Controller {
 
     private $_model;
+    private $_userClass;
+
+    public function __construct($id, $module, $config = array())
+    {
+        parent::__construct($id, $module, $config);
+        $this->_userClass = \Yii::$app->user->identityClass;
+    }
 
     public function actionIndex()
     {
@@ -46,9 +53,9 @@ class AdminController extends \yii\console\Controller {
         $this->stdout("Deleting $email: ");
         $deleteCounter = User::deleteAll(['email' => $email]);
         if (1 === $deleteCounter) {
-            $this->stdout("OK", Console::FG_GREEN);
+            $this->stdout("OK", Console::FG_GREEN, Console::BOLD);
         } else {
-            $this->stdout("FAILED", Console::FG_RED);
+            $this->stdout("FAILED", Console::FG_RED, Console::BOLD);
             $this->stderr("\nGenerated Message: ");
             //Error Handling
 
@@ -79,9 +86,9 @@ class AdminController extends \yii\console\Controller {
     {
         $model = new PasswordReset(['email' => $email]);
         if ($model->validate() && $model->sendEmail()) {
-            $this->stdout("OK", Console::FG_GREEN);
+            $this->stdout("OK", Console::FG_GREEN, Console::BOLD);
         } else {
-            $this->stdout("FAILED", Console::FG_RED);
+            $this->stdout("FAILED", Console::FG_RED, Console::BOLD);
             $this->stderr("\nGenerated Message: ");
             $this->stderr('System Unable to reset password for the email provided', Console::BG_BLUE);
         }
@@ -110,7 +117,7 @@ class AdminController extends \yii\console\Controller {
         //Save the model
         try {
             if (!$this->_model->save()) {
-                $this->stdout("FAILED", Console::FG_RED);
+                $this->stdout("FAILED", Console::FG_RED, Console::BOLD);
                 $this->stderr("\nGenerated Message: ");
                 //Todo: Optional full error message display
                 $this->stderr('Unable to save to Database - Validator Failed', Console::BG_BLUE);
@@ -141,14 +148,11 @@ class AdminController extends \yii\console\Controller {
      */
     private function setupModel($email, $user)
     {
-        $this->_model = new User();
-        if (isset($user)) {
-            $this->_model->username = $user;
-        } else {
-            $this->_model->username = $email;
-        }
-        $this->_model->email = $email;
-        $this->_model->auth_key = \Yii::$app->security->generateRandomString();
+        $this->_model = new $this->_userClass([
+            'email' => $email,
+            'auth_key' => \Yii::$app->security->generateRandomString(),
+            'username' => (isset($user) ? $user : $email)
+        ]);
     }
 
     private function promptPassword()
@@ -156,7 +160,7 @@ class AdminController extends \yii\console\Controller {
         $exitCode = FALSE;
         $this->hideUserInput();
         $passwd = $this->_promptPassword();
-        $this->stdout("OK", Console::FG_GREEN);
+        $this->stdout("OK", Console::FG_GREEN, Console::BOLD);
         $confirm = "";
         if ($passwd !== "") {
             $confirm = $this->_promptPassword(TRUE);

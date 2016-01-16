@@ -14,9 +14,7 @@ return [
             'baseUrl' => 'localhost/dev/viajero',
             'hostInfo' => 'localhost/dev/viajero',
             'scriptUrl' => '',
-            'rules' => [
-                'online-betalen/<invoice_number>/<hash>' => 'invoice/online-payment',
-            ],
+      
         ],
         'log' => [
             'targets' => [

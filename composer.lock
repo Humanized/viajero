@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1fedb6450f2220fadca210c4fa6ca588",
-    "content-hash": "c1972c842292980bcc4b4e50c610fc12",
+    "hash": "874376f37e169ef4a321d334b97255b1",
+    "content-hash": "a372b269647f0626067ea32ea8725fd2",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -317,6 +317,102 @@
             "time": "2013-11-30 08:25:19"
         },
         {
+            "name": "humanized/yii2-clihelpers",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Humanized/yii2-clihelpers.git",
+                "reference": "842d8b32c49582c37e87fc699a5fb5f35d5cce95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Humanized/yii2-clihelpers/zipball/842d8b32c49582c37e87fc699a5fb5f35d5cce95",
+                "reference": "842d8b32c49582c37e87fc699a5fb5f35d5cce95",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "@dev"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "humanized\\clihelpers\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Geyssens",
+                    "email": "jeffrey@humanized.be"
+                },
+                {
+                    "name": "François-Xavier de Saint Pern",
+                    "email": "fx@humanized.be"
+                }
+            ],
+            "description": "Collection of Yii2 CLI Helper Functions - User predominantly in yii2-user and yii2-rbac",
+            "keywords": [
+                "cli",
+                "helper",
+                "yii2"
+            ],
+            "time": "2016-01-16 19:43:50"
+        },
+        {
+            "name": "humanized/yii2-user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Humanized/yii2-user.git",
+                "reference": "da2c9b1007d6638e91d497173e7fd51f254968f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Humanized/yii2-user/zipball/da2c9b1007d6638e91d497173e7fd51f254968f0",
+                "reference": "da2c9b1007d6638e91d497173e7fd51f254968f0",
+                "shasum": ""
+            },
+            "require": {
+                "humanized/yii2-clihelpers": "*",
+                "yiisoft/yii2": "@dev"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "humanized\\user\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Geyssens",
+                    "email": "jeffrey@humanized.be"
+                },
+                {
+                    "name": "François-Xavier de Saint Pern",
+                    "email": "fx@humanized.be"
+                }
+            ],
+            "description": "User Administration Module for Yii2. This module wraps and extends the default user management interface provided by the framework. Several parts of this module however, are designed to be fully compatible with the factory-provided implementations related to user management. For this, several configuration options can be set to override module defaults allowing the use of the factory default or custom classes.",
+            "keywords": [
+                "admin",
+                "api",
+                "cli",
+                "gui",
+                "helper",
+                "user",
+                "user-management",
+                "yii2"
+            ],
+            "time": "2016-01-16 19:50:46"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "5.x-dev",
             "source": {
@@ -375,12 +471,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "58cbb1ae2f9659a550e1ad7cbd935c1a608cd8a7"
+                "reference": "5311873ebad98abc446d49f9c33c1070a0f6ba73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/58cbb1ae2f9659a550e1ad7cbd935c1a608cd8a7",
-                "reference": "58cbb1ae2f9659a550e1ad7cbd935c1a608cd8a7",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/5311873ebad98abc446d49f9c33c1070a0f6ba73",
+                "reference": "5311873ebad98abc446d49f9c33c1070a0f6ba73",
                 "shasum": ""
             },
             "require": {
@@ -461,7 +557,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-01-14 14:52:28"
+            "time": "2016-01-16 06:37:36"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -868,12 +964,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "05dd7a27c575fb3dc3482b5bd24c8bd6c151ae45"
+                "reference": "d1a58d8c64f9075960665dc5347f5906ecb063cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/05dd7a27c575fb3dc3482b5bd24c8bd6c151ae45",
-                "reference": "05dd7a27c575fb3dc3482b5bd24c8bd6c151ae45",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/d1a58d8c64f9075960665dc5347f5906ecb063cf",
+                "reference": "d1a58d8c64f9075960665dc5347f5906ecb063cf",
                 "shasum": ""
             },
             "require": {
@@ -913,7 +1009,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2016-01-05 08:55:15"
+            "time": "2016-01-15 17:12:14"
         }
     ],
     "aliases": [],

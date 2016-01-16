@@ -2,6 +2,7 @@
 
 namespace common\modules\rbac\commands;
 
+use humanized\clihelpers\controllers\Controller;
 use yii\rbac\DbManager;
 use yii\helpers\Console;
 
@@ -33,7 +34,7 @@ use yii\helpers\Console;
  * 
  * 
  */
-class AdminController extends \yii\console\Controller {
+class AdminController extends Controller {
 
     /**
      *
@@ -50,7 +51,6 @@ class AdminController extends \yii\console\Controller {
 
     public function actionIndex()
     {
-        system('stty echo');
         echo "Welcome to the Humanized RBAC Administrator CLI \n";
         echo "This tool requires Yii 2.0.7 or later \n";
         return 0;
@@ -101,9 +101,10 @@ class AdminController extends \yii\console\Controller {
      */
 
     /**
+     * Role Assignment to a user. 
      * 
-     * @param type $role
-     * @param type $user
+     * @param string $roleName
+     * @param string $userName
      */
     public function actionAssign($roleName, $userName)
     {
@@ -165,6 +166,30 @@ class AdminController extends \yii\console\Controller {
     public function actionRuleTable()
     {
         return $this->printActionValue();
+    }
+
+    /*
+     * Methods listing various 
+     */
+
+    public function actionPermissionByRole($roleName)
+    {
+        
+    }
+
+    public function actionPermissionByUser($userName)
+    {
+        
+    }
+
+    public function actionRolesByUser($userName)
+    {
+        
+    }
+
+    public function actionUserIdsByRole($roleName)
+    {
+        
     }
 
     /*

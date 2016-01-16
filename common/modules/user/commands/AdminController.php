@@ -2,6 +2,7 @@
 
 namespace common\modules\user\commands;
 
+use humanized\clihelpers\controllers\Controller;
 use common\modules\user\models\User;
 use common\modules\user\models\PasswordReset;
 use yii\helpers\Console;
@@ -28,7 +29,7 @@ use yii\helpers\Console;
  * 
  * 
  */
-class AdminController extends \yii\console\Controller {
+class AdminController extends Controller {
 
     private $_model;
     private $_userClass;
@@ -41,7 +42,6 @@ class AdminController extends \yii\console\Controller {
 
     public function actionIndex()
     {
-        system('stty echo');
         echo "Welcome to the Humanized User Administrator CLI \n";
         echo "This tool requires Yii 2.0.7 or later \n";
         return 0;
@@ -53,16 +53,17 @@ class AdminController extends \yii\console\Controller {
         $this->stdout("Deleting $email: ");
         $deleteCounter = User::deleteAll(['email' => $email]);
         if (1 === $deleteCounter) {
-            $this->stdout("OK", Console::FG_GREEN, Console::BOLD);
+            $this->msgSuccess();
         } else {
-            $this->stdout("FAILED", Console::FG_RED, Console::BOLD);
-            $this->stderr("\nGenerated Message: ");
+
+
             //Error Handling
 
             if ($deleteCounter === 0) {
                 $exitCode = 1;
-                $this->stderr("Account not found", Console::BG_BLUE);
+                $this->msgError("Account Not Found");
             } else {
+                $this->msgError("Multiple Accounts Deleted - DB may be in Inconsistent State");
                 $this->stderr("Multiple Accounts Deleted - DB may be in Inconsistent State", Console::BG_BLUE);
                 $exitCode = 2;
             }

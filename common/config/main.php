@@ -16,14 +16,14 @@ return [
             'cache' => 'cache', // this enables RBAC caching
         ],
         'user' => [
-            'identityClass' => 'common\modules\user\models\User',
+            'identityClass' => 'humanized\user\models\User',
             'class' => 'yii\web\User',
         //   'enableAutoLogin' => true,
         ],
     ],
     'modules' => [
         'user' => [
-            'class' => 'common\modules\user\Module',
+            'class' => 'humanized\user\Module',
         ],
         'rbac' => [
             'class' => 'common\modules\rbac\Module',

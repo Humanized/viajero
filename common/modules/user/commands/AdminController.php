@@ -6,6 +6,28 @@ use common\modules\user\models\User;
 use common\modules\user\models\PasswordReset;
 use yii\helpers\Console;
 
+/**
+ * A CLI allowing basic Yii2 user administration functions.
+ * 
+ * Supported commands:
+ * 
+ * > user/admin/create <email:required> <uname:optional>
+ * 
+ * > user/admin/delete <email:required>
+ * 
+ * > user/admin/send-password-reset-link <email:required>
+ * 
+ * > user/admin/send-token-generation-link <email:required>
+ * 
+ * 
+ * @name User Administration CLI
+ * @version 0.1
+ * @author Jeffrey Geyssens <jeffrey@humanized.be>
+ * @package yii2-user
+ * 
+ * 
+ * 
+ */
 class AdminController extends \yii\console\Controller {
 
     private $_model;
@@ -18,7 +40,7 @@ class AdminController extends \yii\console\Controller {
         return 0;
     }
 
-    public function actionDel($email)
+    public function actionDelete($email)
     {
         $exitCode = 0;
         $this->stdout("Deleting $email: ");
@@ -27,13 +49,14 @@ class AdminController extends \yii\console\Controller {
             $this->stdout("OK", Console::FG_GREEN);
         } else {
             $this->stdout("FAILED", Console::FG_RED);
+            $this->stderr("\nGenerated Message: ");
             //Error Handling
 
             if ($deleteCounter === 0) {
                 $exitCode = 1;
-                $this->stderr("\nAccount not found", Console::BG_BLUE);
+                $this->stderr("Account not found", Console::BG_BLUE);
             } else {
-                $this->stderr("\nMultiple Accounts Deleted - DB may be in Inconsistent State", Console::BG_BLUE);
+                $this->stderr("Multiple Accounts Deleted - DB may be in Inconsistent State", Console::BG_BLUE);
                 $exitCode = 2;
             }
         }
@@ -55,13 +78,12 @@ class AdminController extends \yii\console\Controller {
     private function sendMail($email)
     {
         $model = new PasswordReset(['email' => $email]);
-
-
         if ($model->validate() && $model->sendEmail()) {
             $this->stdout("OK", Console::FG_GREEN);
         } else {
             $this->stdout("FAILED", Console::FG_RED);
-            $this->stderr('\nSystem Unable to reset password for the email provided');
+            $this->stderr("\nGenerated Message: ");
+            $this->stderr('System Unable to reset password for the email provided', Console::BG_BLUE);
         }
     }
 
@@ -70,6 +92,7 @@ class AdminController extends \yii\console\Controller {
      * 
      * Upon submitting a valid username/email combination, a prompt is launched to get the password corresponding to the user-account. If no password is provided, the system will email the created. 
      * 
+     * @todo Optional full exception output
      * @todo Validate e-mail format
      * @todo Implement stty echo alternative for windows (for now windows is not supported)
      * @param type $email Unique E-mail address to be assigned to the user account (mandatory)
@@ -78,6 +101,7 @@ class AdminController extends \yii\console\Controller {
      */
     public function actionAdd($email, $user = NULL)
     {
+        $this->stdout("Adding Account for $email");
         $exitCode = 0;
         //Creates User model and sets provided variables
         $this->setupModel($email, $user);
@@ -85,13 +109,17 @@ class AdminController extends \yii\console\Controller {
         $sendPasswordResetMail = $this->promptPassword();
         //Save the model
         try {
-            $this->_model->save();
-            if ($sendPasswordResetMail) {
+            if (!$this->_model->save()) {
+                $this->stdout("FAILED", Console::FG_RED);
+                $this->stderr("\nGenerated Message: ");
+                //Todo: Optional full error message display
+                $this->stderr('Unable to save to Database - Validator Failed', Console::BG_BLUE);
+            } elseif ($sendPasswordResetMail) {
                 $this->actionSendPasswordResetLink($this->_model->email);
             }
         } catch (\Exception $e) {
-            $this->stderr("\nError: ", Console::FG_RED);
-            $this->stderr("User Account Creation Failed with Message: ");
+            $this->stdout("FAILED", Console::FG_RED);
+            $this->stderr("\nGenerated Message: ");
             //Todo: Optional full error message display
             $this->stderr(strtok($e->getMessage(), "\n"), Console::BG_BLUE);
             $exitCode = 1;
@@ -99,7 +127,7 @@ class AdminController extends \yii\console\Controller {
         //Should remove in stable versions, but nice little fallback just in case
         $this->unhideUserInput();
         //Two newlines B4 program exit
-        $this->stderr("\n\n");
+        $this->stdout("\n\n");
         return $exitCode;
     }
 
@@ -128,6 +156,7 @@ class AdminController extends \yii\console\Controller {
         $exitCode = FALSE;
         $this->hideUserInput();
         $passwd = $this->_promptPassword();
+        $this->stdout("OK", Console::FG_GREEN);
         $confirm = "";
         if ($passwd !== "") {
             $confirm = $this->_promptPassword(TRUE);
@@ -156,7 +185,7 @@ class AdminController extends \yii\console\Controller {
     {
         $passwd = false;
         while (false === $passwd) {
-            $passwd = $this->prompt("\n" . ($confirm ? "Confirm" : "Submit") . " User Account Password:");
+            $passwd = $this->prompt("\n" . ($confirm ? "Confirm" : "Submit") . " User Account Password: ");
         }
         return $passwd;
     }

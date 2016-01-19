@@ -1,14 +1,12 @@
-Yii 2 Advanced Project Template
-===============================
+Viajero: Centralised Location Management System
+===============================================
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+Viajero is a web-application that aims to maintain a database of clean location data, i.e. city and postcode combinations and tagging.
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+Viajero comes with a fully functional and simple to use REST API, which then query the data using any web-or mobile application framework and content-management system regardless of the technology employed.
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
+By factory default, the source package contains the import data to setup all the countries of the world, along with for the United Kingdom and Benelux regions. 
+
 
 Documentation is at [docs/guide/README.md](docs/guide/README.md).
 

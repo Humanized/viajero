@@ -7,6 +7,7 @@ Viajero comes with a fully functional and simple to use REST API, which then que
 
 By factory default, the source package contains the import data to setup all the countries of the world, along with for the United Kingdom and Benelux regions. 
 
+The ultimate goal is to enable a deployment of the system functioning as content-provider, providing a full data set, providing the appropriate licence fees, while having the application source code remain 100% Open-Source.
 
 Documentation is at [docs/guide/README.md](docs/guide/README.md).
 

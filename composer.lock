@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "874376f37e169ef4a321d334b97255b1",
-    "content-hash": "a372b269647f0626067ea32ea8725fd2",
+    "hash": "356919aa0f13ead5a127d155b8083376",
+    "content-hash": "86a672442207ac1e015f8c2c851ef569",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -322,12 +322,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Humanized/yii2-clihelpers.git",
-                "reference": "842d8b32c49582c37e87fc699a5fb5f35d5cce95"
+                "reference": "da627f1c45576ea9870981dfa5826c03f1447d57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Humanized/yii2-clihelpers/zipball/842d8b32c49582c37e87fc699a5fb5f35d5cce95",
-                "reference": "842d8b32c49582c37e87fc699a5fb5f35d5cce95",
+                "url": "https://api.github.com/repos/Humanized/yii2-clihelpers/zipball/da627f1c45576ea9870981dfa5826c03f1447d57",
+                "reference": "da627f1c45576ea9870981dfa5826c03f1447d57",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +359,57 @@
                 "helper",
                 "yii2"
             ],
-            "time": "2016-01-16 19:43:50"
+            "time": "2016-01-16 20:42:07"
+        },
+        {
+            "name": "humanized/yii2-contact",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Humanized/yii2-contact.git",
+                "reference": "95193d3e718180fc086d0375e3148c288c2d43ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Humanized/yii2-contact/zipball/95193d3e718180fc086d0375e3148c288c2d43ce",
+                "reference": "95193d3e718180fc086d0375e3148c288c2d43ce",
+                "shasum": ""
+            },
+            "require": {
+                "humanized/yii2-clihelpers": "*",
+                "yiisoft/yii2": "@dev"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "humanized\\contact\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Geyssens",
+                    "email": "jeffrey@humanized.be"
+                },
+                {
+                    "name": "François-Xavier de Saint Pern",
+                    "email": "fx@humanized.be"
+                }
+            ],
+            "description": "Yii2 module which provides functionality to deal with contact and location data in a sane way.",
+            "keywords": [
+                "api",
+                "cli",
+                "contact",
+                "gui",
+                "helper",
+                "location",
+                "yii2"
+            ],
+            "time": "2016-01-19 17:48:48"
         },
         {
             "name": "humanized/yii2-user",
@@ -367,12 +417,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Humanized/yii2-user.git",
-                "reference": "da2c9b1007d6638e91d497173e7fd51f254968f0"
+                "reference": "714732e2250a744fc5071e852ce62a85a254e874"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Humanized/yii2-user/zipball/da2c9b1007d6638e91d497173e7fd51f254968f0",
-                "reference": "da2c9b1007d6638e91d497173e7fd51f254968f0",
+                "url": "https://api.github.com/repos/Humanized/yii2-user/zipball/714732e2250a744fc5071e852ce62a85a254e874",
+                "reference": "714732e2250a744fc5071e852ce62a85a254e874",
                 "shasum": ""
             },
             "require": {
@@ -410,7 +460,7 @@
                 "user-management",
                 "yii2"
             ],
-            "time": "2016-01-16 19:50:46"
+            "time": "2016-01-19 16:11:32"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -471,12 +521,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "5311873ebad98abc446d49f9c33c1070a0f6ba73"
+                "reference": "5bf2d29eb31ea044581ae36685b9e1b25b62656a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/5311873ebad98abc446d49f9c33c1070a0f6ba73",
-                "reference": "5311873ebad98abc446d49f9c33c1070a0f6ba73",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/5bf2d29eb31ea044581ae36685b9e1b25b62656a",
+                "reference": "5bf2d29eb31ea044581ae36685b9e1b25b62656a",
                 "shasum": ""
             },
             "require": {
@@ -557,7 +607,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-01-16 06:37:36"
+            "time": "2016-01-19 12:19:19"
         },
         {
             "name": "yiisoft/yii2-bootstrap",

@@ -25,6 +25,9 @@ return [
         'user' => [
             'class' => 'humanized\user\Module',
         ],
+        'contact' => [
+            'class' => 'humanized\contact\Module',
+        ],
         'rbac' => [
             'class' => 'common\modules\rbac\Module',
         ],

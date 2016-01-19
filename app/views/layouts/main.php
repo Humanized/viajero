@@ -23,50 +23,44 @@ AppAsset::register($this);
     </head>
     <body>
         <?php $this->beginBody() ?>
+        <div class="container-fluid">
 
-        <div class="wrap">
             <?php
             NavBar::begin([
                 'brandLabel' => '<strong>VIAJERO</strong><br> Location Management System',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar-default navbar-fixed-top',
+                    'class' => 'navbar',
                 ],
             ]);
             $menuItems = [
+                /*
                 ['label' => 'Home', 'url' => ['/site/index']],
                 ['label' => 'About', 'url' => ['/site/about']],
-                ['label' => 'Contact', 'url' => ['/site/contact']],
+                 * 
+                 */
+                ['label' => 'Location Managment', 'url' => ['/contact/location/index']],
+                ['label' => 'User Managment', 'url' => ['/user/admin/index']],
             ];
-            if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-                $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-            } else {
-                $menuItems[] = '<li>'
-                        . Html::beginForm(['/site/logout'], 'post')
-                        . Html::submitButton(
-                                'Logout (' . Yii::$app->user->identity->username . ')', ['class' => 'btn btn-link']
-                        )
-                        . Html::endForm()
-                        . '</li>';
-            }
+
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => $menuItems,
+                'items' => array_merge($menuItems, humanized\user\components\GUIHelper::getUserMenuItems()),
             ]);
             NavBar::end();
             ?>
-
-            <div class="container">
-<?=
-Breadcrumbs::widget([
-    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-])
-?>
-                <?= Alert::widget() ?>
-                <?= $content ?>
-            </div>
         </div>
+        <div class="container-fluid" id="main-wrapper">
+            <?=
+            Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ])
+            ?>
+            <?= Alert::widget() ?>
+            <?= $content ?>
+
+        </div>
+
 
         <footer class="footer">
             <div class="container">

@@ -3,7 +3,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
+use kartik\nav\NavX;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
@@ -34,18 +34,22 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                /*
-                ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'About', 'url' => ['/site/about']],
-                 * 
-                 */
-                ['label' => 'Location Managment', 'url' => ['/contact/location/index']],
-                ['label' => 'User Managment', 'url' => ['/user/admin/index']],
+                ['label' => 'Features', 'url' => ['/site/features']],
+                ['label' => 'Pricing', 'url' => ['/site/pricing']],
+                ['label' => 'Download', 'url' => ['/site/download']],
+                    /*
+                      ['label' => 'Home', 'url' => ['/site/index']],
+                      ['label' => 'About', 'url' => ['/site/about']],
+
+                      ['label' => 'Location Managment', 'url' => ['/contact/location/index']],
+                      ['label' => 'User Managment', 'url' => ['/user/admin/index']],
+                     *             * 
+                     */
             ];
 
-            echo Nav::widget([
+            echo NavX::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => array_merge($menuItems, humanized\user\components\GUIHelper::getUserMenuItems()),
+                'items' => $menuItems,
             ]);
             NavBar::end();
             ?>
@@ -63,14 +67,38 @@ AppAsset::register($this);
 
 
         <footer class="footer">
-            <div class="container">
-                <p class="pull-left">&copy; Humanized <?= date('Y') ?></p>
+            <?php
+            NavBar::begin([
 
-                <p class="pull-right"><?= Yii::powered() ?></p>
-            </div>
-        </footer>
+                'options' => [
+                    'class' => 'navbar navbar-default',
+                ],
+            ]);
+            $menuItems = [
+                ['label' => '<span class="glyphicon glyphicon-globe"></span><br>Locations', 'url' => ['/contact/location/index']],
+                ['label' => '<span class="glyphicon glyphicon-user"></span><br>Account', 'url' => ['/user/account/index']],
+                ['label' => '<span class="glyphicon glyphicon-book"></span><br>Docs', 'url' => ['/site/documentation']],
+                    /*
+                      ['label' => 'Home', 'url' => ['/site/index']],
+                      ['label' => 'About', 'url' => ['/site/about']],
 
-        <?php $this->endBody() ?>
-    </body>
+                      ['label' => 'Location Managment', 'url' => ['/contact/location/index']],
+                      ['label' => 'User Managment', 'url' => ['/user/admin/index']],
+                     *             * 
+                     */
+            ];
+
+            echo NavX::widget([
+                'encodeLabels' => false,
+                'options' => ['class' => 'navbar-nav navbar-right'],
+                'items' => array_merge($menuItems, humanized\user\components\GUIHelper::getUserMenuItems()),
+            ]);
+            NavBar::end();
+            ?>
+        </div>
+    </footer>
+
+    <?php $this->endBody() ?>
+</body>
 </html>
 <?php $this->endPage() ?>

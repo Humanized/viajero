@@ -1,4 +1,5 @@
 <?php
+
 namespace app\controllers;
 
 use Yii;
@@ -16,8 +17,8 @@ use yii\filters\AccessControl;
 /**
  * Site controller
  */
-class SiteController extends Controller
-{
+class SiteController extends Controller {
+
     /**
      * @inheritdoc
      */
@@ -91,7 +92,7 @@ class SiteController extends Controller
             return $this->goBack();
         } else {
             return $this->render('login', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
@@ -126,7 +127,7 @@ class SiteController extends Controller
             return $this->refresh();
         } else {
             return $this->render('contact', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
@@ -139,6 +140,36 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    /**
+     * Displays pricing page.
+     *
+     * @return mixed
+     */
+    public function actionPricing()
+    {
+        return $this->render('pricing');
+    }
+
+    /**
+     * Displays features page.
+     *
+     * @return mixed
+     */
+    public function actionFeatures()
+    {
+        return $this->render('features');
+    }
+
+    /**
+     * Displays documentation page.
+     *
+     * @return mixed
+     */
+    public function actionDocumentation()
+    {
+        return $this->render('documentation');
     }
 
     /**
@@ -158,7 +189,7 @@ class SiteController extends Controller
         }
 
         return $this->render('signup', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -181,7 +212,7 @@ class SiteController extends Controller
         }
 
         return $this->render('requestPasswordResetToken', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -207,7 +238,8 @@ class SiteController extends Controller
         }
 
         return $this->render('resetPassword', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
+
 }

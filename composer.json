@@ -19,7 +19,8 @@
         "humanized/yii2-user": "*",
         "humanized/yii2-contact": "*",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
+        "yiisoft/yii2-swiftmailer": "*",
+        "kartik-v/yii2-nav-x": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

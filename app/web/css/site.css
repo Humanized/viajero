@@ -1,32 +1,38 @@
 html,
 body {
+
+    background:lightsteelblue;
     height: 100%;
-    background:#6699FF;
+
 }
 
 .wrap {
     min-height: 100%;
     height: auto;
     margin: 0 auto -60px;
-    padding: 0 0 60px;
+    padding: 0 0 0px;
 }
 
 .wrap > .container {
     padding: 70px 15px 20px;
+
 }
 
 .footer {
+    position:fixed;
+    width:100%;
     bottom:0;
     color:white;
-    fontsize:1em;
-    height: 200px;
+    font-size:1em;
+    height: 100px;
     background:darkslategray;
-    padding-top: 20px;
+
 }
 
 .jumbotron {
     text-align: center;
-    background:#669AAA;;
+    background-image: url("../images/viajero.png");
+    height:800px;;
     color:white;
     margin-left:20%;
     margin-right:20%;
@@ -117,6 +123,8 @@ a.desc:after {
     background:darkslategray;
     border:0px;
     border-color:none;
+    position:fixed;
+    width:99%;
 
 }
 
@@ -127,15 +135,38 @@ a.desc:after {
     border-right: 2px #999 solid;
 }
 
+.navbar-default .navbar-nav > li > a {
+    color:none;
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: white;
+    font-weight: bold;
+    height:100%;
+}
+
 .navbar-default .navbar-brand{
     color:yellow;
 }
 
 #main-wrapper{
+
     margin:20px;
+    margin-top:100px;
 
 }
 
 blockquote{
     background:white;
+}
+
+table{
+    background-color: #F5F5F5;
+}
+
+.navbar .glyphicon{
+    display:block;
+    text-align:center;
+    font-size:2.5em;
+    margin-bottom: -5px;
 }

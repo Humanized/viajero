@@ -6,7 +6,7 @@ $this->title = 'Viajero - Open-Source Location Management Software Suite';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Viajero</h1>
+
     </div>
 
     <div class="body-content">

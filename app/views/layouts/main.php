@@ -30,7 +30,7 @@ AppAsset::register($this);
                 'brandLabel' => '<strong>VIAJERO</strong><br> Location Management System',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar',
+                    'class' => 'navbar navbar-default',
                 ],
             ]);
             $menuItems = [
@@ -64,7 +64,7 @@ AppAsset::register($this);
 
         <footer class="footer">
             <div class="container">
-                <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+                <p class="pull-left">&copy; Humanized <?= date('Y') ?></p>
 
                 <p class="pull-right"><?= Yii::powered() ?></p>
             </div>

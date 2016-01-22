@@ -1,6 +1,23 @@
+@font-face {
+    font-family: 'branding';
+    src: url(../fonts/Pacifico.ttf);
+
+}
+
+.navbar-brand > strong{
+    font-family: 'branding', Fallback, sans-serif;
+    color:yellow;
+    font-size:2em;
+    line-height: 1.75;
+
+}
+
+
+
+
 html,
 body {
-
+    
     background:lightsteelblue;
     height: 100%;
 
@@ -25,7 +42,7 @@ body {
     color:white;
     font-size:1em;
     height: 100px;
-    background:darkslategray;
+    background:#072265;
 
 }
 
@@ -34,8 +51,7 @@ body {
     background-image: url("../images/viajero.png");
     height:800px;;
     color:white;
-    margin-left:20%;
-    margin-right:20%;
+
     text-transform: uppercase;
 
 }
@@ -119,8 +135,8 @@ a.desc:after {
 }
 .navbar{
     margin-top:10px;
-    min-height: 70px;
-    background:darkslategray;
+    min-height: 100px;
+    background:#072265;
     border:0px;
     border-color:none;
     position:fixed;
@@ -131,9 +147,8 @@ a.desc:after {
 .navbar-brand{
 
     height:100%;
-    border-left: 2px #999 solid;
-    border-right: 2px #999 solid;
 }
+
 
 .navbar-default .navbar-nav > li > a {
     color:none;
@@ -146,13 +161,12 @@ a.desc:after {
 }
 
 .navbar-default .navbar-brand{
-    color:yellow;
+    color:white;
 }
 
-#main-wrapper{
+#main{
 
-    margin:20px;
-    margin-top:100px;
+    margin-top:150px;
 
 }
 

@@ -34,9 +34,9 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Features', 'url' => ['/site/features']],
-                ['label' => 'Pricing', 'url' => ['/site/pricing']],
-                ['label' => 'Download', 'url' => ['/site/download']],
+           //     ['label' => 'Features', 'url' => ['/site/features']],
+           //     ['label' => 'Pricing', 'url' => ['/site/pricing']],
+            //    ['label' => 'Download', 'url' => ['/site/download']],
                     /*
                       ['label' => 'Home', 'url' => ['/site/index']],
                       ['label' => 'About', 'url' => ['/site/about']],
@@ -49,12 +49,12 @@ AppAsset::register($this);
 
             echo NavX::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => $menuItems,
+                'items' => array_merge($menuItems, humanized\user\components\GUIHelper::getUserMenuItems()),
             ]);
             NavBar::end();
             ?>
         </div>
-        <div class="container-fluid" id="main-wrapper">
+        <div id="main" class="container">
             <?=
             Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -74,9 +74,10 @@ AppAsset::register($this);
                     'class' => 'navbar navbar-default',
                 ],
             ]);
+
             $menuItems = [
                 ['label' => '<span class="glyphicon glyphicon-globe"></span><br>Locations', 'url' => ['/contact/location/index']],
-                ['label' => '<span class="glyphicon glyphicon-user"></span><br>Account', 'url' => ['/user/account/index']],
+                ['label' => '<span class="glyphicon glyphicon-user"></span><br>Account', 'visible' => NULL !== \Yii::$app->user->getId(), 'url' => ['/user/account/index', 'id' => \Yii::$app->user->getId()]],
                 ['label' => '<span class="glyphicon glyphicon-book"></span><br>Docs', 'url' => ['/site/documentation']],
                     /*
                       ['label' => 'Home', 'url' => ['/site/index']],
@@ -91,7 +92,7 @@ AppAsset::register($this);
             echo NavX::widget([
                 'encodeLabels' => false,
                 'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => array_merge($menuItems, humanized\user\components\GUIHelper::getUserMenuItems()),
+                'items' => $menuItems,
             ]);
             NavBar::end();
             ?>

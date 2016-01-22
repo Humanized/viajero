@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "078ac5ac16485c81ab4493c42c161e67",
-    "content-hash": "596a65da1467400f6dbbcdb9807a70a3",
+    "hash": "e7c5d9f175dee2c98d3625ae4d00181d",
+    "content-hash": "01a0d5a1d7986b2f4e9f7861d3795fbf",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -218,12 +218,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cebe/markdown.git",
-                "reference": "e14d3da8f84eefa3792fd22b5b5ecba9c98d2e18"
+                "reference": "d7b6f46cd423174c8a86c7f816dea45008dbf454"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cebe/markdown/zipball/e14d3da8f84eefa3792fd22b5b5ecba9c98d2e18",
-                "reference": "e14d3da8f84eefa3792fd22b5b5ecba9c98d2e18",
+                "url": "https://api.github.com/repos/cebe/markdown/zipball/d7b6f46cd423174c8a86c7f816dea45008dbf454",
+                "reference": "d7b6f46cd423174c8a86c7f816dea45008dbf454",
                 "shasum": ""
             },
             "require": {
@@ -270,7 +270,7 @@
                 "markdown",
                 "markdown-extra"
             ],
-            "time": "2015-03-20 11:07:08"
+            "time": "2016-01-21 11:46:58"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -326,7 +326,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Humanized/yii2-clihelpers/zipball/75368414e7ded91c6a4792ec3cdfa24973983b48",
+                "url": "https://api.github.com/repos/Humanized/yii2-clihelpers/zipball/8fb4600a589480545e35e8c888ca32a50491acdb",
                 "reference": "75368414e7ded91c6a4792ec3cdfa24973983b48",
                 "shasum": ""
             },
@@ -419,12 +419,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Humanized/yii2-user.git",
-                "reference": "c1c9ab52b52c4da10afa551773f652675e94fcd3"
+                "reference": "252454efb744dfa417777958ccb2b2ac8e28bb7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Humanized/yii2-user/zipball/c1c9ab52b52c4da10afa551773f652675e94fcd3",
-                "reference": "c1c9ab52b52c4da10afa551773f652675e94fcd3",
+                "url": "https://api.github.com/repos/Humanized/yii2-user/zipball/ae2b32b3d118fc6e62a181f5a64749aaca8efa6a",
+                "reference": "252454efb744dfa417777958ccb2b2ac8e28bb7c",
                 "shasum": ""
             },
             "require": {
@@ -462,7 +462,7 @@
                 "user-management",
                 "yii2"
             ],
-            "time": "2016-01-19 22:45:49"
+            "time": "2016-01-22 01:54:05"
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
@@ -470,12 +470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "8f647fc925432d2849d28f46549d44b5f552dc68"
+                "reference": "728f6a94cc2a6ea5350b8733835cf444516e40e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/8f647fc925432d2849d28f46549d44b5f552dc68",
-                "reference": "8f647fc925432d2849d28f46549d44b5f552dc68",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/728f6a94cc2a6ea5350b8733835cf444516e40e1",
+                "reference": "728f6a94cc2a6ea5350b8733835cf444516e40e1",
                 "shasum": ""
             },
             "type": "library",
@@ -515,7 +515,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2016-01-19 17:52:10"
+            "time": "2016-01-21 19:35:12"
         },
         {
             "name": "kartik-v/bootstrap-star-rating",
@@ -523,15 +523,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-star-rating.git",
-                "reference": "6ee707bcddc45051c19085cc576cee2b844957d4"
+                "reference": "83d9f4ca10b0e74c66b94aeadf7681e6ab90059a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/6ee707bcddc45051c19085cc576cee2b844957d4",
-                "reference": "6ee707bcddc45051c19085cc576cee2b844957d4",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/83d9f4ca10b0e74c66b94aeadf7681e6ab90059a",
+                "reference": "83d9f4ca10b0e74c66b94aeadf7681e6ab90059a",
                 "shasum": ""
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.5.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "kartik\\plugins\\rating\\": ""
@@ -556,7 +561,7 @@
                 "jquery",
                 "star"
             ],
-            "time": "2016-01-13 18:56:54"
+            "time": "2016-01-21 19:25:04"
         },
         {
             "name": "kartik-v/dependent-dropdown",
@@ -1691,6 +1696,201 @@
             "time": "2015-12-05 10:37:16"
         },
         {
+            "name": "nikic/php-parser",
+            "version": "0.9.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "ef70767475434bdb3615b43c327e2cae17ef12eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/ef70767475434bdb3615b43c327e2cae17ef12eb",
+                "reference": "ef70767475434bdb3615b43c327e2cae17ef12eb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PHPParser": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "time": "2014-07-23 18:24:17"
+        },
+        {
+            "name": "phpdocumentor/reflection",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/Reflection.git",
+                "reference": "fc40c3f604ac2287eb5c314174d5109b2c699372"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/Reflection/zipball/fc40c3f604ac2287eb5c314174d5109b2c699372",
+                "reference": "fc40c3f604ac2287eb5c314174d5109b2c699372",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "~0.9.4",
+                "php": ">=5.3.3",
+                "phpdocumentor/reflection-docblock": "~2.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "behat/behat": "~2.4",
+                "mockery/mockery": "~0.8",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "phpDocumentor": [
+                        "src/",
+                        "tests/unit/",
+                        "tests/mocks/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Reflection library to do Static Analysis for PHP Projects",
+            "homepage": "http://www.phpdoc.org",
+            "keywords": [
+                "phpDocumentor",
+                "phpdoc",
+                "reflection",
+                "static analysis"
+            ],
+            "time": "2014-11-14 11:43:04"
+        },
+        {
+            "name": "phpdocumentor/reflection-docblock",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d68dbdc53dc358a816f00b300704702b2eaff7b8",
+                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "dflydev/markdown": "~1.0",
+                "erusev/parsedown": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "phpDocumentor": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "mike.vanriel@naenius.com"
+                }
+            ],
+            "time": "2015-02-03 12:10:50"
+        },
+        {
+            "name": "psr/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "d8e60a5619fff77f9669da8997697443ef1a1d7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d8e60a5619fff77f9669da8997697443ef1a1d7e",
+                "reference": "d8e60a5619fff77f9669da8997697443ef1a1d7e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-01-06 21:40:42"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "5.x-dev",
             "source": {
@@ -1749,12 +1949,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "5bf2d29eb31ea044581ae36685b9e1b25b62656a"
+                "reference": "f40e9a93f3666f58616d70b62cb65c0963fc77ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/5bf2d29eb31ea044581ae36685b9e1b25b62656a",
-                "reference": "5bf2d29eb31ea044581ae36685b9e1b25b62656a",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/f40e9a93f3666f58616d70b62cb65c0963fc77ad",
+                "reference": "f40e9a93f3666f58616d70b62cb65c0963fc77ad",
                 "shasum": ""
             },
             "require": {
@@ -1835,7 +2035,59 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-01-19 12:19:19"
+            "time": "2016-01-21 17:22:51"
+        },
+        {
+            "name": "yiisoft/yii2-apidoc",
+            "version": "2.0.0-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-apidoc.git",
+                "reference": "bb8cc0543f3d624d4e3d5985a72453dcebe67070"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-apidoc/zipball/bb8cc0543f3d624d4e3d5985a72453dcebe67070",
+                "reference": "bb8cc0543f3d624d4e3d5985a72453dcebe67070",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "0.9.*",
+                "phpdocumentor/reflection": ">=1.0.3",
+                "phpdocumentor/reflection-docblock": ">2.0.1",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "bin": [
+                "apidoc"
+            ],
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii\\apidoc\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc",
+                    "homepage": "http://cebe.cc/",
+                    "role": "Core framework development"
+                }
+            ],
+            "description": "API Documentation generator for the Yii framework 2.0",
+            "keywords": [
+                "api",
+                "apidoc",
+                "documentation",
+                "phpdoc",
+                "yii2"
+            ],
+            "time": "2014-04-13 21:58:59"
         },
         {
             "name": "yiisoft/yii2-bootstrap",

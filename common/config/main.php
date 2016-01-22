@@ -16,7 +16,7 @@ return [
             'cache' => 'cache', // this enables RBAC caching
         ],
         'user' => [
-            'identityClass' => 'humanized\user\models\User',
+            'identityClass' => 'humanized\user\models\common\User',
             'class' => 'yii\web\User',
         //   'enableAutoLogin' => true,
         ],
@@ -24,6 +24,9 @@ return [
     'modules' => [
         'user' => [
             'class' => 'humanized\user\Module',
+            'enableUserName' => FALSE,
+            
+           // 'enableSignUp' => FALSE,
         ],
         'contact' => [
             'class' => 'humanized\contact\Module',

@@ -2,8 +2,8 @@
 
 use yii\db\Migration;
 
-class m130524_201442_init extends Migration
-{
+class m130524_201442_init extends Migration {
+
     public function safeUp()
     {
         $tableOptions = null;
@@ -12,21 +12,41 @@ class m130524_201442_init extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%user}}', [
+        $this->createTable('country_data', [
+            'id' => $this->integer(),
+            'is_complete' => $this->boolean(FALSE)->notNull(),
+            'coverage' => $this->text(),
+            'authority' => $this->string(200),
+            'authority_website' => $this->string(1000),
+            'last_update' => $this->integer(),
+                ], $tableOptions);
+
+        //Either DATA LICENSE 
+        $this->createTable('license_category', [
             'id' => $this->primaryKey(),
-            'username' => $this->string()->notNull()->unique(),
-            'auth_key' => $this->string(32)->notNull(),
-            'password_hash' => $this->string()->notNull(),
-            'password_reset_token' => $this->string()->unique(),
-            'email' => $this->string()->notNull()->unique(),
-            'status' => $this->smallInteger()->notNull()->defaultValue(10),
-            'created_at' => $this->integer()->notNull(),
-            'updated_at' => $this->integer()->notNull(),
-        ], $tableOptions);
+            'name' => $this->string(10),
+                ], $tableOptions);
+
+        $this->createTable('license', [
+            'id' => $this->primaryKey(),
+            'caption' => $this->text(),
+            'country_id' => $this->integer(),
+            'category_id' => $this->integer(),
+                ], $tableOptions);
+
+        $this->createTable('license_resource', [
+            'id' => $this->primaryKey(),
+            'name' => $this->string(),
+            'caption' => $this->text(),
+            'reference_website' => $this->string(1000),
+            'licence_id' => $this->integer(),
+            'category_id' => $this->integer(),
+                ], $tableOptions);
     }
 
     public function safeDown()
     {
         $this->dropTable('{{%user}}');
     }
+
 }

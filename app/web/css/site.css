@@ -1,26 +1,70 @@
+html,
+body {
+
+    background:lightsteelblue;
+    height: 100%;
+}
+
+body{
+    overflow-y: scroll;
+    margin:0;
+}
+
+
 @font-face {
     font-family: 'branding';
     src: url(../fonts/Pacifico.ttf);
 
 }
 
+.container-fluid{
+    padding:0;
+}
 .navbar-brand > strong{
     font-family: 'branding', Fallback, sans-serif;
     color:yellow;
     font-size:2em;
     line-height: 1.75;
-
 }
 
 
+/* align the logout "link" (button in form) of the navbar */
+.nav > li > form {
+    padding: 8px;
+}
+
+.nav > li > form > button:hover {
+    text-decoration: none;
+}
+.navbar{
+    min-height: 100px;
+    background:#072265;
+    border:0px;
+    border-color:inherit;
+    border-radius: 0;
+    position:fixed;
+    width:100%;
+
+}
+
+.navbar-brand{
+
+    height:100%;
+}
 
 
-html,
-body {
-    
-    background:lightsteelblue;
-    height: 100%;
+.navbar-default .navbar-nav > li > a {
+    color:inherit;
+}
 
+.navbar-default .navbar-nav > li > a{
+    color: white;
+    font-weight: bold;
+    height:100%;
+}
+
+.navbar-default .navbar-brand{
+    color:white;
 }
 
 .wrap {
@@ -34,6 +78,7 @@ body {
     padding: 70px 15px 20px;
 
 }
+
 
 .footer {
     position:fixed;
@@ -125,44 +170,6 @@ a.desc:after {
     margin: 0 0 15px 0;
 }
 
-/* align the logout "link" (button in form) of the navbar */
-.nav > li > form {
-    padding: 8px;
-}
-
-.nav > li > form > button:hover {
-    text-decoration: none;
-}
-.navbar{
-    margin-top:10px;
-    min-height: 100px;
-    background:#072265;
-    border:0px;
-    border-color:none;
-    position:fixed;
-    width:99%;
-
-}
-
-.navbar-brand{
-
-    height:100%;
-}
-
-
-.navbar-default .navbar-nav > li > a {
-    color:none;
-}
-
-.navbar-default .navbar-nav > li > a{
-    color: white;
-    font-weight: bold;
-    height:100%;
-}
-
-.navbar-default .navbar-brand{
-    color:white;
-}
 
 #main{
 

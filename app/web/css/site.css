@@ -44,6 +44,7 @@ body{
     border-radius: 0;
     position:fixed;
     width:100%;
+    z-index: 500;
 
 }
 
@@ -174,6 +175,7 @@ a.desc:after {
 #main{
 
     margin-top:150px;
+    padding-bottom:100px;
 
 }
 

@@ -34,9 +34,9 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-           //     ['label' => 'Features', 'url' => ['/site/features']],
-           //     ['label' => 'Pricing', 'url' => ['/site/pricing']],
-            //    ['label' => 'Download', 'url' => ['/site/download']],
+                    //     ['label' => 'Features', 'url' => ['/site/features']],
+                    //     ['label' => 'Pricing', 'url' => ['/site/pricing']],
+                    //    ['label' => 'Download', 'url' => ['/site/download']],
                     /*
                       ['label' => 'Home', 'url' => ['/site/index']],
                       ['label' => 'About', 'url' => ['/site/about']],
@@ -77,6 +77,7 @@ AppAsset::register($this);
 
             $menuItems = [
                 ['label' => '<span class="glyphicon glyphicon-globe"></span><br>Locations', 'url' => ['/contact/location/index']],
+                ['label' => '<span class="glyphicon glyphicon-bullhorn"></span><br>Translations', 'url' => ['/translation/admin/index']],
                 ['label' => '<span class="glyphicon glyphicon-user"></span><br>Account', 'visible' => NULL !== \Yii::$app->user->getId(), 'url' => ['/user/account/index', 'id' => \Yii::$app->user->getId()]],
                 ['label' => '<span class="glyphicon glyphicon-book"></span><br>Docs', 'url' => ['/site/documentation']],
                     /*

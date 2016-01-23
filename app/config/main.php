@@ -9,9 +9,8 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\controllers',
+
     'components' => [
-
-
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -23,6 +22,13 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+        // Override the urlManager component
+        'urlManager' => [
+            'class' => 'codemix\localeurls\UrlManager',
+            // List all supported languages here
+            // Make sure, you include your app's default language.
+            'languages' => ['en', 'nl', 'fr', 'de'],
         ],
     /*
       'urlManager' => [

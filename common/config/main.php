@@ -22,11 +22,13 @@ return [
         ],
     ],
     'modules' => [
+        'translation' => [
+            'class' => 'humanized\translation\Module',
+        ],
         'user' => [
             'class' => 'humanized\user\Module',
             'enableUserName' => FALSE,
-            
-           // 'enableSignUp' => FALSE,
+        // 'enableSignUp' => FALSE,
         ],
         'contact' => [
             'class' => 'humanized\contact\Module',

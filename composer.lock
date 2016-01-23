@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e7c5d9f175dee2c98d3625ae4d00181d",
-    "content-hash": "01a0d5a1d7986b2f4e9f7861d3795fbf",
+    "hash": "a6792c94c1e74001a00789a3be36c998",
+    "content-hash": "4f67e9dbcb77e2c3d1434177d205cf47",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -273,6 +273,47 @@
             "time": "2016-01-21 11:46:58"
         },
         {
+            "name": "codemix/yii2-localeurls",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codemix/yii2-localeurls.git",
+                "reference": "7c2544e006c4971d29747632985d6401492cd9ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codemix/yii2-localeurls/zipball/7c2544e006c4971d29747632985d6401492cd9ef",
+                "reference": "7c2544e006c4971d29747632985d6401492cd9ef",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "codemix\\localeurls\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Härtl",
+                    "email": "haertl.mike@gmail.com"
+                }
+            ],
+            "description": "Automatic locale/language management for URLs.",
+            "keywords": [
+                "i18n",
+                "locale",
+                "yii2"
+            ],
+            "time": "2015-09-17 07:13:16"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.6.0",
             "source": {
@@ -322,12 +363,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Humanized/yii2-clihelpers.git",
-                "reference": "75368414e7ded91c6a4792ec3cdfa24973983b48"
+                "reference": "3acc8d9eca0c449bacf00f973275c1b0a73efb09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Humanized/yii2-clihelpers/zipball/8fb4600a589480545e35e8c888ca32a50491acdb",
-                "reference": "75368414e7ded91c6a4792ec3cdfa24973983b48",
+                "url": "https://api.github.com/repos/Humanized/yii2-clihelpers/zipball/3acc8d9eca0c449bacf00f973275c1b0a73efb09",
+                "reference": "3acc8d9eca0c449bacf00f973275c1b0a73efb09",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +400,7 @@
                 "helper",
                 "yii2"
             ],
-            "time": "2016-01-19 18:21:31"
+            "time": "2016-01-23 04:05:57"
         },
         {
             "name": "humanized/yii2-contact",
@@ -367,12 +408,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Humanized/yii2-contact.git",
-                "reference": "2a206b9a618c8671b4f3e5e7000cd9bd953f9577"
+                "reference": "fc8ced3dc2e53ec3d847626a50562ecb7e8ad6b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Humanized/yii2-contact/zipball/2a206b9a618c8671b4f3e5e7000cd9bd953f9577",
-                "reference": "2a206b9a618c8671b4f3e5e7000cd9bd953f9577",
+                "url": "https://api.github.com/repos/Humanized/yii2-contact/zipball/fc8ced3dc2e53ec3d847626a50562ecb7e8ad6b2",
+                "reference": "fc8ced3dc2e53ec3d847626a50562ecb7e8ad6b2",
                 "shasum": ""
             },
             "require": {
@@ -411,7 +452,58 @@
                 "location",
                 "yii2"
             ],
-            "time": "2016-01-20 00:16:16"
+            "time": "2016-01-23 04:12:39"
+        },
+        {
+            "name": "humanized/yii2-translation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Humanized/yii2-translation.git",
+                "reference": "e15950d7a66df0691dcb03fddd35b11451f323ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Humanized/yii2-translation/zipball/e15950d7a66df0691dcb03fddd35b11451f323ea",
+                "reference": "e15950d7a66df0691dcb03fddd35b11451f323ea",
+                "shasum": ""
+            },
+            "require": {
+                "codemix/yii2-localeurls": "1.3.0",
+                "humanized/yii2-clihelpers": "*",
+                "yiisoft/yii2": "@dev"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "humanized\\translation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Geyssens",
+                    "email": "jeffrey@humanized.be"
+                },
+                {
+                    "name": "François-Xavier de Saint Pern",
+                    "email": "fx@humanized.be"
+                }
+            ],
+            "description": "Yii2 module which provides functionality to deal with translation in a sane way.",
+            "keywords": [
+                "gui",
+                "i18n",
+                "internationalisation",
+                "internationalization",
+                "module",
+                "translation",
+                "yii2"
+            ],
+            "time": "2016-01-23 04:02:40"
         },
         {
             "name": "humanized/yii2-user",
@@ -419,12 +511,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Humanized/yii2-user.git",
-                "reference": "252454efb744dfa417777958ccb2b2ac8e28bb7c"
+                "reference": "a2a7235170b077babd9c53ea4e3146f5c4f7c8cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Humanized/yii2-user/zipball/ae2b32b3d118fc6e62a181f5a64749aaca8efa6a",
-                "reference": "252454efb744dfa417777958ccb2b2ac8e28bb7c",
+                "url": "https://api.github.com/repos/Humanized/yii2-user/zipball/a2a7235170b077babd9c53ea4e3146f5c4f7c8cc",
+                "reference": "a2a7235170b077babd9c53ea4e3146f5c4f7c8cc",
                 "shasum": ""
             },
             "require": {
@@ -462,7 +554,7 @@
                 "user-management",
                 "yii2"
             ],
-            "time": "2016-01-22 01:54:05"
+            "time": "2016-01-23 01:48:20"
         },
         {
             "name": "kartik-v/bootstrap-fileinput",

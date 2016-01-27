@@ -24,36 +24,44 @@ AppAsset::register($this);
     <body>
         <?php $this->beginBody() ?>
         <div class="container-fluid">
+            <div id="top-menu">
+                <div class="container">
+                    <?=
+                    humanized\translation\components\LanguageSelector::widget();
+                    ?>     
+                </div>
 
-            <?php
-            NavBar::begin([
-                'brandLabel' => '<strong>VIAJERO</strong><br> Location Management System',
-                'brandUrl' => Yii::$app->homeUrl,
-                'options' => [
-                    'class' => 'navbar navbar-default',
-                ],
-            ]);
-            $menuItems = [
-                    //     ['label' => 'Features', 'url' => ['/site/features']],
-                    //     ['label' => 'Pricing', 'url' => ['/site/pricing']],
-                    //    ['label' => 'Download', 'url' => ['/site/download']],
-                    /*
-                      ['label' => 'Home', 'url' => ['/site/index']],
-                      ['label' => 'About', 'url' => ['/site/about']],
+                <?php
+                NavBar::begin([
+                    'brandLabel' => '<strong>VIAJERO</strong><br> Location Management System',
+                    'brandUrl' => Yii::$app->homeUrl,
+                    'options' => [
+                        'class' => 'navbar navbar-default',
+                    ],
+                ]);
+                $menuItems = [
+                        //     ['label' => 'Features', 'url' => ['/site/features']],
+                        //     ['label' => 'Pricing', 'url' => ['/site/pricing']],
+                        //    ['label' => 'Download', 'url' => ['/site/download']],
+                        /*
+                          ['label' => 'Home', 'url' => ['/site/index']],
+                          ['label' => 'About', 'url' => ['/site/about']],
 
-                      ['label' => 'Location Managment', 'url' => ['/contact/location/index']],
-                      ['label' => 'User Managment', 'url' => ['/user/admin/index']],
-                     *             * 
-                     */
-            ];
+                          ['label' => 'Location Managment', 'url' => ['/contact/location/index']],
+                          ['label' => 'User Managment', 'url' => ['/user/admin/index']],
+                         *             * 
+                         */
+                ];
 
-            echo NavX::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => array_merge($menuItems, humanized\user\components\GUIHelper::getUserMenuItems()),
-            ]);
-            NavBar::end();
-            ?>
+                echo NavX::widget([
+                    'options' => ['class' => 'navbar-nav navbar-right'],
+                    'items' => array_merge($menuItems, humanized\user\components\GUIHelper::getUserMenuItems()),
+                ]);
+                NavBar::end();
+                ?>
+            </div>
         </div>
+
         <div id="main" class="container">
             <?=
             Breadcrumbs::widget([

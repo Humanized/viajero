@@ -17,6 +17,16 @@ body{
 
 }
 
+#top-menu{
+    background:#072265;
+    color:lightblue;
+}
+
+#top-menu a{
+    color:white;
+    font-weight: bold;
+}
+
 .container-fluid{
     padding:0;
 }

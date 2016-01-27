@@ -3,6 +3,14 @@
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        // Override the urlManager component
+        'urlManager' => [
+            'class' => 'humanized\translation\UrlManager',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false, // Only considered when enablePrettyUrl is set to true
+        // List all supported languages here
+        // Make sure, you include your app's default language.
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -13,7 +21,7 @@ return [
             'itemChildTable' => 'privilege_tree',
             'assignmentTable' => 'user_privilege',
             'ruleTable' => 'rule',
-            'cache' => 'cache', // this enables RBAC caching
+        // 'cache' => 'cache', // this enables RBAC caching
         ],
         'user' => [
             'identityClass' => 'humanized\user\models\common\User',
@@ -22,19 +30,24 @@ return [
         ],
     ],
     'modules' => [
+        'clihelper' => [
+            'class' => 'humanized\clihelpers\Module',
+        ],
         'translation' => [
             'class' => 'humanized\translation\Module',
         ],
         'user' => [
             'class' => 'humanized\user\Module',
             'enableUserName' => FALSE,
+            'enableRBAC' => TRUE,
+            'enableStatusCodes' => TRUE,
         // 'enableSignUp' => FALSE,
         ],
         'contact' => [
             'class' => 'humanized\contact\Module',
         ],
         'rbac' => [
-            'class' => 'common\modules\rbac\Module',
+            'class' => 'humanized\rbac\Module',
         ],
     ],
 ];

@@ -25,7 +25,7 @@ return [
         ],
         // Override the urlManager component
         'urlManager' => [
-            'class' => 'codemix\localeurls\UrlManager',
+            'class' => 'humanized\translation\UrlManager',
             // List all supported languages here
             // Make sure, you include your app's default language.
             'languages' => ['en', 'nl', 'fr', 'de'],

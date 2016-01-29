@@ -26,9 +26,21 @@ AppAsset::register($this);
         <div class="container-fluid">
             <div id="top-menu">
                 <div class="container">
-                    <?=
-                    humanized\translation\components\LanguageSelector::widget();
-                    ?>     
+                    <div class="pull-left">
+
+                        <?=
+                        humanized\translation\components\LanguageSelector::widget();
+                        ?>     
+                    </div>    
+                    <div class="pull-right">
+
+                        <?=
+                        humanized\user\components\Authentication::widget();
+                        ?>     
+                    </div>  
+
+
+
                 </div>
 
                 <?php
@@ -40,22 +52,15 @@ AppAsset::register($this);
                     ],
                 ]);
                 $menuItems = [
-                        //     ['label' => 'Features', 'url' => ['/site/features']],
-                        //     ['label' => 'Pricing', 'url' => ['/site/pricing']],
-                        //    ['label' => 'Download', 'url' => ['/site/download']],
-                        /*
-                          ['label' => 'Home', 'url' => ['/site/index']],
-                          ['label' => 'About', 'url' => ['/site/about']],
-
-                          ['label' => 'Location Managment', 'url' => ['/contact/location/index']],
-                          ['label' => 'User Managment', 'url' => ['/user/admin/index']],
-                         *             * 
-                         */
+                    ['label' => '<span class="glyphicon glyphicon-globe"></span><br>Locations', 'url' => ['/contact/location/index']],
+                    ['label' => '<span class="glyphicon glyphicon-bullhorn"></span><br>Translations', 'url' => ['/translation/admin/index']],
+                    ['label' => '<span class="glyphicon glyphicon-user"></span><br>Account', 'visible' => NULL !== \Yii::$app->user->getId(), 'url' => ['/user/account/index', 'id' => \Yii::$app->user->getId()]],
+                    ['label' => '<span class="glyphicon glyphicon-book"></span><br>Docs', 'url' => ['/site/documentation']],
                 ];
-
                 echo NavX::widget([
+                    'encodeLabels' => FALSE,
                     'options' => ['class' => 'navbar-nav navbar-right'],
-                    'items' => array_merge($menuItems, humanized\user\components\GUIHelper::getUserMenuItems()),
+                    'items' => $menuItems,
                 ]);
                 NavBar::end();
                 ?>
@@ -73,42 +78,12 @@ AppAsset::register($this);
 
         </div>
 
-
+<!--
         <footer class="footer">
-            <?php
-            NavBar::begin([
 
-                'options' => [
-                    'class' => 'navbar navbar-default',
-                ],
-            ]);
-
-            $menuItems = [
-                ['label' => '<span class="glyphicon glyphicon-globe"></span><br>Locations', 'url' => ['/contact/location/index']],
-                ['label' => '<span class="glyphicon glyphicon-bullhorn"></span><br>Translations', 'url' => ['/translation/admin/index']],
-                ['label' => '<span class="glyphicon glyphicon-user"></span><br>Account', 'visible' => NULL !== \Yii::$app->user->getId(), 'url' => ['/user/account/index', 'id' => \Yii::$app->user->getId()]],
-                ['label' => '<span class="glyphicon glyphicon-book"></span><br>Docs', 'url' => ['/site/documentation']],
-                    /*
-                      ['label' => 'Home', 'url' => ['/site/index']],
-                      ['label' => 'About', 'url' => ['/site/about']],
-
-                      ['label' => 'Location Managment', 'url' => ['/contact/location/index']],
-                      ['label' => 'User Managment', 'url' => ['/user/admin/index']],
-                     *             * 
-                     */
-            ];
-
-            echo NavX::widget([
-                'encodeLabels' => false,
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => $menuItems,
-            ]);
-            NavBar::end();
-            ?>
-        </div>
-    </footer>
-
-    <?php $this->endBody() ?>
-</body>
+        </footer>
+-->
+        <?php $this->endBody() ?>
+    </body>
 </html>
 <?php $this->endPage() ?>

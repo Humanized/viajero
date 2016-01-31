@@ -41,7 +41,7 @@ return [
             'enableUserName' => FALSE,
             'enableRBAC' => TRUE,
             'enableStatusCodes' => TRUE,
-        // 'enableSignUp' => FALSE,
+            'enableTokenAuthentication' => TRUE,
         ],
         'contact' => [
             'class' => 'humanized\contact\Module',

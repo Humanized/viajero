@@ -52,6 +52,7 @@ AppAsset::register($this);
                     ],
                 ]);
                 $menuItems = [
+                    ['label' => '<span class="glyphicon glyphicon-list-alt"></span><br>Contacts', 'url' => ['/contact/contact/index']],
                     ['label' => '<span class="glyphicon glyphicon-globe"></span><br>Locations', 'url' => ['/contact/location/index']],
                     ['label' => '<span class="glyphicon glyphicon-bullhorn"></span><br>Translations', 'url' => ['/translation/admin/index']],
                     ['label' => '<span class="glyphicon glyphicon-user"></span><br>Account', 'visible' => NULL !== \Yii::$app->user->getId(), 'url' => ['/user/account/index', 'id' => \Yii::$app->user->getId()]],
@@ -78,11 +79,11 @@ AppAsset::register($this);
 
         </div>
 
-<!--
-        <footer class="footer">
-
-        </footer>
--->
+        <!--
+                <footer class="footer">
+        
+                </footer>
+        -->
         <?php $this->endBody() ?>
     </body>
 </html>

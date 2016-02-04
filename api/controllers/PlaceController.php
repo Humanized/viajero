@@ -26,8 +26,7 @@ class PlaceController extends ActiveController {
 
     public function prepareDataProvider()
     {
-
-        $model = new LocationSearch(['country_id' => Yii::$app->request->get('country')]);
+        $model = new LocationSearch(['q' => Yii::$app->request->get('q'), 'country_id' => Yii::$app->request->get('country')]);
         return $model->search(Yii::$app->request->queryParams);
     }
 

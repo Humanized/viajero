@@ -3,6 +3,7 @@
 namespace api\controllers;
 
 use Yii;
+use yii\filters\auth\HttpBasicAuth;
 use yii\rest\ActiveController;
 use humanized\location\models\location\LocationSearch;
 
@@ -10,8 +11,19 @@ class PlaceController extends ActiveController {
 
     public $modelClass = 'humanized\location\models\Location';
 
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+        $behaviors['authenticator'] = [
+            'class' => HttpBasicAuth::className(),
+        ];
+        return $behaviors;
+    }
+
     public function actions()
     {
+
+
 
         $actions = parent::actions();
 

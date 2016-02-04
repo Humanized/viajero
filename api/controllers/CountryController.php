@@ -4,11 +4,21 @@ namespace api\controllers;
 
 use Yii;
 use yii\rest\ActiveController;
+use yii\filters\auth\HttpBasicAuth;
 use humanized\location\models\location\CountrySearch;
 
 class CountryController extends ActiveController {
 
     public $modelClass = 'humanized\location\models\Country';
+
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+        $behaviors['authenticator'] = [
+            'class' => HttpBasicAuth::className(),
+        ];
+        return $behaviors;
+    }
 
     public function actions()
     {

@@ -11,7 +11,7 @@ return [
     'controllerNamespace' => 'api\controllers',
     'components' => [
         'user' => [
-            'identityClass' => 'common\models\user\User',
+            'identityClass' => 'humanized\user\models\common\User',
             'loginUrl' => null,
             'enableSession' => false,
         ],
@@ -23,18 +23,29 @@ return [
             ],
         ],
         'urlManager' => [
-            
             'enablePrettyUrl' => true,
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'place'],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'country'],
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'location'],
             ],
         ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
-    ],
-    'params' => $params,
-];
+        'response' => [
+            'class' => 'yii\web\Response',
+            'format' => 'xml',
+            'on beforeSend' => function ($event) {
+                $response = $event->sender;
+                if ($response->data !== null && Yii::$app->request->get('suppress_response_code')) {
+                    $response->data = [
+                        'success' => $response->isSuccessful,
+                        'data' => $response->data,
+                    ];
+                    $response->statusCode = 200;
+                }
+            },
+                ],
+            ],
+            'params' => $params,
+        ];
+        

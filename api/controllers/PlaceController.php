@@ -4,14 +4,15 @@ namespace api\controllers;
 
 use Yii;
 use yii\rest\ActiveController;
-use common\models\Location;
+use humanized\location\models\location\LocationSearch;
 
-class LocationController extends ActiveController {
+class PlaceController extends ActiveController {
 
-    public $modelClass = 'common\models\Location';
+    public $modelClass = 'humanized\location\models\Location';
 
     public function actions()
     {
+
         $actions = parent::actions();
 
         // Only allow read-only actions (for now)
@@ -26,7 +27,7 @@ class LocationController extends ActiveController {
     public function prepareDataProvider()
     {
 
-        $model = new Location();
+        $model = new LocationSearch(['country_id' => Yii::$app->request->get('country')]);
         return $model->search(Yii::$app->request->queryParams);
     }
 

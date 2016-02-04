@@ -43,6 +43,9 @@ return [
             'enableStatusCodes' => TRUE,
             'enableTokenAuthentication' => TRUE,
         ],
+        'location' => [
+            'class' => 'humanized\location\Module',
+        ],
         'contact' => [
             'class' => 'humanized\contact\Module',
         ],

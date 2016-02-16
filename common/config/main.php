@@ -38,6 +38,7 @@ return [
         ],
         'user' => [
             'class' => 'humanized\user\Module',
+            'root'=>'*@humanized.be',
             'enableSignUp' => TRUE,
             'enableUserName' => FALSE,
             'enableRBAC' => TRUE,

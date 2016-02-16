@@ -19,7 +19,6 @@ body{
 
 #top-menu{
     background:#072265;
-    color:lightblue;
     position:fixed;
     width: 100%;
 }
@@ -203,3 +202,10 @@ table{
     font-size:2.5em;
     margin-bottom: -5px;
 }
+
+.btn-link {
+    font-weight: bold;
+    color: white;
+    border-radius: 0px;
+}
+

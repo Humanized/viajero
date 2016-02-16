@@ -38,6 +38,7 @@ return [
         ],
         'user' => [
             'class' => 'humanized\user\Module',
+            'enableSignUp' => TRUE,
             'enableUserName' => FALSE,
             'enableRBAC' => TRUE,
             'enableStatusCodes' => TRUE,
@@ -45,6 +46,11 @@ return [
         ],
         'location' => [
             'class' => 'humanized\location\Module',
+            'enableRemote' => TRUE,
+            'remoteSettings' => [
+                'uri' => 'localhost/dev/viajero/api/',
+                'token' => 'AZCNZ6z-HSL-Kw24QO7U74u9guIc8NA63ogqO_uqw-KUpqC-mOTycuCwcfRBkP4VO-4cGGHlKaf1zrmrUzcxpvt6KFgrlZOzUP6d',
+            ]
         ],
         'contact' => [
             'class' => 'humanized\contact\Module',

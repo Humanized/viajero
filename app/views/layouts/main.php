@@ -27,13 +27,11 @@ AppAsset::register($this);
             <div id="top-menu">
                 <div class="container">
                     <div class="pull-left">
-
                         <?=
                         humanized\translation\components\LanguageSelector::widget();
                         ?>     
                     </div>    
                     <div class="pull-right">
-
                         <?=
                         humanized\user\components\Authentication::widget();
                         ?>     
@@ -52,8 +50,8 @@ AppAsset::register($this);
                     ],
                 ]);
                 $menuItems = [
-                    ['label' => '<span class="glyphicon glyphicon-list-alt"></span><br>Contacts', 'url' => ['/contact/contact/index']],
-                    ['label' => '<span class="glyphicon glyphicon-globe"></span><br>Locations', 'url' => ['/contact/location/index']],
+                    ['label' => '<span class="glyphicon glyphicon-list-alt"></span><br>Contacts', 'url' => ['/contact/admin/index']],
+                    ['label' => '<span class="glyphicon glyphicon-globe"></span><br>Locations', 'url' => ['/location/admin/index']],
                     ['label' => '<span class="glyphicon glyphicon-bullhorn"></span><br>Translations', 'url' => ['/translation/admin/index']],
                     ['label' => '<span class="glyphicon glyphicon-user"></span><br>Account', 'visible' => NULL !== \Yii::$app->user->getId(), 'url' => ['/user/account/index', 'id' => \Yii::$app->user->getId()]],
                     ['label' => '<span class="glyphicon glyphicon-book"></span><br>Docs', 'url' => ['/site/documentation']],

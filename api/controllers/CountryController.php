@@ -36,6 +36,7 @@ class CountryController extends ActiveController {
     public function prepareDataProvider()
     {
         $model = new CountrySearch();
+        
         return $model->search(Yii::$app->request->queryParams);
     }
 

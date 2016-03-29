@@ -15,7 +15,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.6",
+        "yiisoft/yii2": "2.0.7",
         "humanized/yii2-translation": "*",
         "humanized/yii2-user": "*",
         "humanized/yii2-contact": "*",

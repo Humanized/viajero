@@ -26,7 +26,7 @@ return [
         'user' => [
             'identityClass' => 'humanized\user\models\common\User',
             'class' => 'yii\web\User',
-        //   'enableAutoLogin' => true,
+            'loginUrl' => ['/user/account/login'],
         ],
     ],
     'modules' => [

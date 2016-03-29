@@ -16,12 +16,14 @@
 echo "\n  Running Humanized Contact Boilerplate Migrations\n\n";
 passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yii2-translation/migrations");
 passthru("php yii translation/setup/data");
+passthru("php yii translation/setup/data-translation");
 passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yii2-location/migrations");
 passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yii2-contact/migrations");
 passthru("yes 2>/dev/null | php yii migrate --migrationPath=@yii/rbac/migrations");
 passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yii2-user/migrations");
 passthru("php yii location/import/country-translations");
 passthru("php yii location/import/dummy-data");
+passthru("php yii location/import/import-default bg_bg");
 /*
 echo "\n  Loading Country Translation Data\n\n";
 passthru("yes 2>/dev/null | php yii location/import/country-translations");

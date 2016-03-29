@@ -42,7 +42,7 @@ return [
             'enableSignUp' => TRUE,
             'enableUserName' => FALSE,
             'enableUserVerification' => TRUE,
-            'enableAdminVerification' => TRUE,
+            'enableAdminVerification' => FALSE,
             'enableRBAC' => TRUE,
             'enableStatusCodes' => TRUE,
             'enableTokenAuthentication' => TRUE,

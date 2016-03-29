@@ -12,7 +12,7 @@ class m130524_201442_init extends Migration {
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('country_data', [
+        $this->createTable('country_resource', [
             'id' => $this->integer(),
             'is_complete' => $this->boolean(FALSE)->notNull(),
             'coverage' => $this->text(),

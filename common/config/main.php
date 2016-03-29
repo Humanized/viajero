@@ -52,7 +52,7 @@ return [
             'enableRemote' => TRUE,
             'remoteSettings' => [
                 'uri' => 'localhost/dev/viajero/api/',
-                'token' => 'AZCNZ6z-HSL-Kw24QO7U74u9guIc8NA63ogqO_uqw-KUpqC-mOTycuCwcfRBkP4VO-4cGGHlKaf1zrmrUzcxpvt6KFgrlZOzUP6d',
+                'token' => 'AFP9PQYmSGNf8aRGC5z3mp-9T2oeKpdyAzfHQ9r87M1Ym2kdd0_Sb4rZJR3QHlWONgh0XF74n2arL0sDk8itLoVr_fbbxrz-G7Di',
             ]
         ],
         'contact' => [

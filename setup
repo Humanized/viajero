@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php
+/**
+ * EC NANO MATERIALS & TECHNOLOGIES WEB PLATFORM
+ * 
+ * QUICK SETUP
+ * 
+ * To run this file: type php setup from project root
+ * Ensure that countries.json is downloaded from
+ * 
+ * 
+ *  
+ */
+//run the migration
+
+echo "\n  Running Humanized Contact Boilerplate Migrations\n\n";
+passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yii2-translation/migrations");
+passthru("php yii translation/setup/data");
+passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yii2-location/migrations");
+passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yii2-contact/migrations");
+passthru("yes 2>/dev/null | php yii migrate --migrationPath=@yii/rbac/migrations");
+passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yii2-user/migrations");
+passthru("php yii location/import/country-translations");
+passthru("php yii location/import/dummy-data");
+/*
+echo "\n  Loading Country Translation Data\n\n";
+passthru("yes 2>/dev/null | php yii location/import/country-translations");
+echo "\n  Base Setup Complete \n\n Running EC-NANO-WEB Specific Migrations\n\n";
+passthru("yes 2>/dev/null | php yii migrate");
+echo "\n  Setting up Core EC-NANO-WEB Data\n\n";
+passthru("yes 2>/dev/null | php yii setup/init");
+echo "\n  Getting Data from Crawler\n\n";
+passthru("yes 2>/dev/null | php yii crawler");
+ * 
+ */
+
+
+

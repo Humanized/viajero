@@ -22,8 +22,11 @@ passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yi
 passthru("yes 2>/dev/null | php yii migrate --migrationPath=@yii/rbac/migrations");
 passthru("yes 2>/dev/null | php yii migrate --migrationPath=@vendor/humanized/yii2-user/migrations");
 passthru("php yii location/import/country-translations");
-passthru("php yii location/import/dummy-data");
-passthru("php yii location/import/import-default bg_bg");
+passthru("php yii location/import/default us_en");
+passthru("php yii location/import/default bg_bg");
+passthru("php yii location/import/default it_it");
+passthru("php yii location/import/default fi_fi");
+passthru("php yii location/import/default pt_pt");
 /*
 echo "\n  Loading Country Translation Data\n\n";
 passthru("yes 2>/dev/null | php yii location/import/country-translations");

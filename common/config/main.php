@@ -41,7 +41,7 @@ return [
             'root' => '*@humanized.be',
             'enableSignUp' => TRUE,
             'enableUserName' => FALSE,
-            'enableUserVerification' => TRUE,
+            'enableUserVerification' => FALSE,
             'enableAdminVerification' => FALSE,
             'enableRBAC' => TRUE,
             'enableStatusCodes' => TRUE,

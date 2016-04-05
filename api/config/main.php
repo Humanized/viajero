@@ -30,6 +30,7 @@ return [
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'place'],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'country'],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'city'],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'nuts-location'],
             ],
         ],
         'response' => [
